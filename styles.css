@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+* {
+    font-family: 'Redressed', cursive;
+    background-color: black;
+    color: white;
+}
+
+body {
+    margin: 0px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  /* overflow: auto;  */
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,1); 
+  transition: all 3s ease-in-out;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color:  rgba(0, 0, 0, 0.4);
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%; 
+}
+
+#container {
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-size: 80pt;
+    text-align: center;
+    user-select: none;
+    color: aliceblue;
+}
+
+.enter-button {
+    width: 150px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #0000;
+    border-radius: 5px;
+    box-shadow: 7px 6px 10px 5px #0ff;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.enter-button h3 {
+    text-align: center;
+    padding-top: 20px; 
+    color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0ff,
+    0 0 82px #0ff,
+    0 0 92px #0ff,
+    0 0 102px #0ff,
+    0 0 151px #0ff;
+
+}
+
+.heading {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 70px;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0ff,
+    0 0 82px #0ff,
+    0 0 92px #0ff,
+    0 0 102px #0ff,
+    0 0 151px #0ff;
+}
+
+.heading-text {
+   font-size: 60px;;
+}
+
+.mid-section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.rules-container, .user-input, .round-result {
+    border: 5px solid #ffff;
+    width: 300px;
+    height: 270px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.rules-text {
+    margin-top: 35px;
+    line-height: 2;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0ff,
+        0 0 82px #0ff,
+        0 0 92px #0ff,
+        0 0 102px #0ff,
+        0 0 151px #0ff;
+}
+
+/* .user-input {
+    border: 5px solid #ffff;
+    width: 300px;
+    height: 270px;
+    text-align: center;
+    font-size: 24px;
+} */
+
+.selection-area {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.selection-area button {
+    width: 170px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 7px 0px;
+    border-top: 2px solid #0ff;
+    border-left: 2px solid #0ff;
+}
+
+.selection-area button:hover {
+    box-shadow: 4px 4px 4px 2px #0ff;
+    text-shadow:
+        0 0 10px #fff,
+        0 0 15px #fff,
+        0 0 21px #fff,
+        0 0 42px #0ff,
+        0 0 82px #0ff,
+        0 0 92px #0ff,
+        0 0 102px #0ff,
+        0 0 151px #0ff;
+}
+
+.score-display {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.score-card {
+    border:  2px solid #0ff;
+    height: 90px;
+    width: 200px;
+    text-align: center;
+    line-height: 2;
+    box-sizing: border-box;
+    padding-top: 8px;
+    font-size: 18px;
+}
+
+.score-card:hover {
+    box-shadow: 2px 2px 2px 2px #0ff;
+}
+
+.result-annoucement {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.results-modal {
+  background-color: rgba(0,0,0,0.8); 
+  margin: 14% auto; 
+  padding: 20px;
+  border: 4px solid #0ff;
+  width: 80%; 
+  text-align: center;
+  font-size: 54px;
+  box-shadow: 2px 2px 4px 2px #0ff;
+}
+
+.results-modal h3 {
+    background-color: #0000;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #0ff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.round-result {
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.result-text-area {
+    margin-top: 20px;
+    font-size: 30px;
+}
