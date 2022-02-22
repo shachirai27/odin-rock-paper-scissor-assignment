@@ -119,7 +119,7 @@ const texts = [
     "to continue.."
 ];
 
-const morphTime = 1.5;
+const morphTime = 0.75;
 const cooldownTime = 0.25;
 
 let textIndex = texts.length - 1;
